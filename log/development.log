@@ -16,3 +16,48 @@ Started GET "/" for 127.0.0.1 at 2013-10-10 14:13:34 +0700
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/eddie/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-10 16:12:03 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/eddie/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (6.9ms)
+Completed 200 OK in 43ms (Views: 21.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 19.2600ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todolist collection=tasks selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4190ms
+  Rendered tasks/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 641ms (Views: 623.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-10 16:12:06 +0700
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2013-10-10 16:12:08 +0700
+Processing by TasksController#new as HTML
+  Rendered tasks/_form.html.erb (44.3ms)
+  Rendered tasks/new.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 62ms (Views: 61.4ms)
