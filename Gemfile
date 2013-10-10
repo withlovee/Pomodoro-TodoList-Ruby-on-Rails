@@ -41,3 +41,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'

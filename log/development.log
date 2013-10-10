@@ -1,0 +1,18 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-10 13:56:54 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/eddie/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 30ms (Views: 12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-10 14:13:31 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/eddie/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 46ms (Views: 21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-10 14:13:34 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/eddie/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms)
