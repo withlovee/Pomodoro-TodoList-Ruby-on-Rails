@@ -35,7 +35,7 @@ class TasksControllerTest < ActionController::TestCase
   end
 
   test "should update task" do
-    patch :update, id: @task, task: { due: @task.due, estimate: @task.estimate, name: @task.name, order: @task.order, priority: @task.priority, status: @task.status, use: @task.use }
+    put :update, id: @task, task: { due: @task.due, estimate: @task.estimate, name: @task.name, order: @task.order, priority: @task.priority, status: @task.status, use: @task.use }
     assert_redirected_to task_path(assigns(:task))
   end
 

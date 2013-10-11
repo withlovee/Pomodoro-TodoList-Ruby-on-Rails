@@ -1,39 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <b>Name:</b>
   <%= @task.name %>
 </p>
 
 <p>
-  <strong>Priority:</strong>
+  <b>Priority:</b>
   <%= @task.priority %>
 </p>
 
 <p>
-  <strong>Due:</strong>
+  <b>Due:</b>
   <%= @task.due %>
 </p>
 
 <p>
-  <strong>Estimate:</strong>
+  <b>Estimate:</b>
   <%= @task.estimate %>
 </p>
 
 <p>
-  <strong>Use:</strong>
+  <b>Use:</b>
   <%= @task.use %>
 </p>
 
 <p>
-  <strong>Order:</strong>
+  <b>Order:</b>
   <%= @task.order %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <b>Status:</b>
   <%= @task.status %>
 </p>
+
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
