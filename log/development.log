@@ -12986,3 +12986,344 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/images/ui-bg_flat_75_ffffff_40x100.png" for 127.0.0.1 at 2013-10-11 17:14:25 +0700
 Served asset /images/ui-bg_flat_75_ffffff_40x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 20:24:03 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (13.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_task.html.erb (6.0ms)
+  Rendered tasks/_create.html.erb (93.0ms)
+  Rendered tasks/index.html.erb within layouts/application (164.0ms)
+Compiled jquery-ui-1.10.3.custom.css  (0ms)  (pid 8600)
+Compiled jquery-ui-1.10.3.custom.min.css  (0ms)  (pid 8600)
+Compiled application.css  (53ms)  (pid 8600)
+Compiled application.js  (30ms)  (pid 8600)
+Completed 200 OK in 889ms (Views: 845.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /application.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /jquery-ui-1.10.3.custom.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.min.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /jquery-ui-1.10.3.custom.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /tasks.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /flat-ui.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /jquery.ui.core.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /jquery.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:04 +0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /jquery.ui.core.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.dropkick.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /jquery.dropkick.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/custom_checkbox_and_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /custom_checkbox_and_radio.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/custom_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /custom_radio.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/jquery.tagsinput.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /jquery.tagsinput.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /jquery.placeholder.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/run_everything.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /run_everything.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/flat-ui.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /flat-ui.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /tasks.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:05 +0700
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/assets/images/ui-bg_flat_75_ffffff_40x100.png" for 127.0.0.1 at 2013-10-11 20:24:06 +0700
+Served asset /images/ui-bg_flat_75_ffffff_40x100.png - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-11 20:24:21 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0004ms)
+  Rendered tasks/_task.html.erb (3.0ms)
+  Rendered tasks/_create.html.erb (7.0ms)
+  Rendered tasks/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 55ms (Views: 49.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:21 +0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:21 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery-ui-1.10.3.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.min.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery-ui-1.10.3.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /flat-ui.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.dropkick.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.dropkick.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom_checkbox_and_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /custom_checkbox_and_radio.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /custom_radio.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tagsinput.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.tagsinput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/run_everything.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /run_everything.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flat-ui.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:22 +0700
+Served asset /flat-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:23 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:23 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:23 +0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/images/ui-bg_flat_75_ffffff_40x100.png" for 127.0.0.1 at 2013-10-11 20:24:23 +0700
+Served asset /images/ui-bg_flat_75_ffffff_40x100.png - 304 Not Modified (0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-10-11 20:24:27 +0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "task"=>{"name"=>"ห", "priority"=>"", "due"=>"", "estimate"=>"", "use"=>"", "order"=>"", "status"=>""}, "commit"=>"Create Task"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pomodoro_development collection=tasks documents=[{"_id"=>"5257fc0b19b226e6b6000001", "name"=>"ห", "priority"=>nil, "due"=>"", "estimate"=>nil, "use"=>nil, "order"=>nil, "status"=>""}] flags=[] (0.0000ms)
+  Rendered tasks/_task.html.erb (4.0ms)
+  Rendered tasks/create.js.erb (7.0ms)
+Completed 200 OK in 24ms (Views: 15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 60ms (Views: 32.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery-ui-1.10.3.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.min.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery-ui-1.10.3.custom.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /tasks.css - 200 OK (0ms)
+
+
+Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /flat-ui.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery.ui.core.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery.ui.core.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery.ui.datepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.dropkick.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /jquery.dropkick.js - 200 OK (0ms)
+
+
+Started GET "/assets/custom_checkbox_and_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /custom_checkbox_and_radio.js - 200 OK (0ms)
+
+
+Started GET "/assets/custom_radio.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:43 +0700
+Served asset /custom_radio.js - 200 OK (0ms)
+
+
+Started GET "/assets/run_everything.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /run_everything.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.tagsinput.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /jquery.tagsinput.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /jquery.placeholder.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /tasks.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/Watches.png" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /Watches.png - 200 OK (2ms)
+
+
+Started GET "/assets/flat-ui.js?body=1" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /flat-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/login/imac.png" for 127.0.0.1 at 2013-10-11 20:24:44 +0700
+Served asset /login/imac.png - 200 OK (2ms)
