@@ -37,4 +37,10 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem 'mongoid'
 gem 'devise'
+<<<<<<< Updated upstream
 gem 'flatui-rails'
+=======
+gem 'flatui-rails'
+gem 'jquery-ui-rails'
+gem 'bcrypt-ruby', '~> 3.0.0'
+>>>>>>> Stashed changes
