@@ -1,8 +1,10 @@
 class TasksController < ApplicationController
+  before_filter :authenticate_user!
   # GET /tasks
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @task = Task.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,6 +80,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end

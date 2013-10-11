@@ -1,6 +1,6 @@
 <h1>Listing tasks</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Priority</th>
@@ -15,7 +15,7 @@
   </tr>
 
 <% @tasks.each do |task| %>
-  <tr>
+  <tr id="<%= dom_id(task) %>">
     <td><%= task.name %></td>
     <td><%= task.priority %></td>
     <td><%= task.due %></td>
@@ -25,11 +25,13 @@
     <td><%= task.status %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', task, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+
+<%= render 'form' %>
 
 <%= link_to 'New Task', new_task_path %>

@@ -117,3 +117,1152 @@ Served asset /tasks.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:06:59 +0700
 Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:21:34 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (19.0ms)
+  Rendered tasks/index.html.erb within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for(@task) do |f| %>
+    2:   <% if @task.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb___55025664_34478328'
+  app/views/tasks/index.html.erb:35:in `_app_views_tasks_index_html_erb__27417113_28688556'
+  app/controllers/tasks_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (22.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (17.0012ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 58ms (Views: 58.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:05 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "task"=>{"name"=>"test", "priority"=>"1", "due"=>"", "estimate"=>"", "use"=>"", "order"=>"", "status"=>""}, "commit"=>"Create Task"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pomodoro_development collection=tasks documents=[{"_id"=>"5257991219b2266e1f000002", "name"=>"test", "priority"=>1, "due"=>nil, "estimate"=>nil, "use"=>nil, "order"=>nil, "status"=>""}] flags=[] (0.9999ms)
+Redirected to http://localhost:3000/tasks/5257991219b2266e1f000002
+Completed 302 Found in 9ms
+
+
+Started GET "/tasks/5257991219b2266e1f000002" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5257991219b2266e1f000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"5257991219b2266e1f000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:10 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (13.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /tasks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:13 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (12.0ms)
+Compiled bootstrap.css  (0ms)  (pid 1248)
+Compiled application.css  (26ms)  (pid 1248)
+Completed 200 OK in 120ms (Views: 120.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /bootstrap.css - 200 OK (28ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /tasks.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:22:54 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:23:05 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (7.0ms)
+  Rendered tasks/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:23:05 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:23:05 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:23:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:23:06 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:23:06 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:23:06 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:23:06 +0700
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:23:06 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:25:59 +0700
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 79ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+Compiled bootstrap.min.js  (0ms)  (pid 1248)
+Compiled application.js  (32ms)  (pid 1248)
+Completed 200 OK in 217ms (Views: 193.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /bootstrap.min.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:00 +0700
+Served asset /application.js - 304 Not Modified (39ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:02 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "user"=>{"email"=>"happierv@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (24.0021ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"email"=>"happierv@gmail.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (67.0030ms)
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 207ms (Views: 17.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:09 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-11 13:26:18 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "user"=>{"email"=>"happierv@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"email"=>"happierv@gmail.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.0000ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pomodoro_development collection=users documents=[{"_id"=>"52579a0a19b2262712000003", "email"=>"happierv@gmail.com", "encrypted_password"=>"$2a$10$kjOt9/Bzp.6BMZdkUxBFreEZz4F5BskAOsyOVHs/OkTwF7Kwrt7sS", "sign_in_count"=>0}] flags=[] (0.9999ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pomodoro_development collection=users selector={"_id"=>"52579a0a19b2262712000003"} update={"$set"=>{"last_sign_in_at"=>2013-10-11 06:26:18 UTC, "current_sign_in_at"=>2013-10-11 06:26:18 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}} flags=[] (0.0000ms)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 124ms
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:26:18 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (75.0051ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 98ms (Views: 22.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:18 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:18 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:26:19 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/tasks/5257991219b2266e1f000002" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "id"=>"5257991219b2266e1f000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (86.0052ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"5257991219b2266e1f000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=pomodoro_development collection=tasks selector={"_id"=>"5257991219b2266e1f000002"} flags=[:remove_first] (0.0000ms)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 96ms
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:29:04 +0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-10-11 13:31:33 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "task"=>{"name"=>"another", "priority"=>"", "due"=>"", "estimate"=>"", "use"=>"", "order"=>"", "status"=>""}, "commit"=>"Create Task"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pomodoro_development collection=tasks documents=[{"_id"=>"52579b4519b226eaba000004", "name"=>"another", "priority"=>nil, "due"=>nil, "estimate"=>nil, "use"=>nil, "order"=>nil, "status"=>""}] flags=[] (1.0002ms)
+Redirected to http://localhost:3000/tasks/52579b4519b226eaba000004
+Completed 302 Found in 37ms
+
+
+Started GET "/tasks/52579b4519b226eaba000004" for 127.0.0.1 at 2013-10-11 13:31:33 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"52579b4519b226eaba000004"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"52579b4519b226eaba000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x47f58f0>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_37672152'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:20:in `show'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:31:37 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (28.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0009ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x58c9860>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_37672152'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:32:54 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (29.0012ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x4831050>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_47680428'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:32:55 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (26.0010ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x57f4ad0>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_31477416'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:32:57 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x47d0480>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_31477416'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:33:52 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (undefined method `_id' for nil:NilClass
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_31511544'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:33:53 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0009ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (undefined method `_id' for nil:NilClass
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_31511544'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (25.0020ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Compiled destroy.js  (0ms)  (pid 1248)
+Compiled application.js  (46ms)  (pid 1248)
+Completed 200 OK in 109ms (Views: 82.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/destroy.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /destroy.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:33:59 +0700
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started DELETE "/tasks/52579b4519b226eaba000004" for 127.0.0.1 at 2013-10-11 13:34:07 +0700
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"52579b4519b226eaba000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"52579b4519b226eaba000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=pomodoro_development collection=tasks selector={"_id"=>"52579b4519b226eaba000004"} flags=[:remove_first] (0.0000ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::MissingTemplate (Missing template tasks/destroy, application/destroy with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.0.0/app/views"
+):
+  app/controllers/tasks_controller.rb:80:in `destroy'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (29.0020ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 49ms (Views: 46.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/destroy.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /destroy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:34:09 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (33.0019ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 55ms (Views: 18.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/destroy.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:37 +0700
+Served asset /destroy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:38 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 13:35:38 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:35:53 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (27.0009ms)
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/index.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionView::Template::Error (undefined method `dom_id' for #<#<Class:0x4162de8>:0x4878240>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_37944648'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 13:35:56 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x4162de8>:0x3a66068>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_37944648'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 14:08:27 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (6.0ms)
+  Rendered tasks/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x4162de8>:0x46a3880>
+  (in D:/git/Pomodoro-TodoList-Ruby-on-Rails/app/assets/javascripts/destroy.js.erb)):
+    3: <head>
+    4:   <title>Pomodoro</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/destroy.js.erb:1:in `block in singletonclass'
+  app/assets/javascripts/destroy.js.erb:65531:in `instance_eval'
+  app/assets/javascripts/destroy.js.erb:65531:in `singletonclass'
+  app/assets/javascripts/destroy.js.erb:65529:in `__tilt_23373072'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__981896509_34954044'
+  app/controllers/tasks_controller.rb:9:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (94.0061ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.0000ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (8.0ms)
+Compiled application.js  (4ms)  (pid 1248)
+Completed 200 OK in 278ms (Views: 150.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:21 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:22 +0700
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNYUpN0gI8Bhl8CLIc2ED+JhlhQ4umxd1YyahlM5vng=", "task"=>{"name"=>"anoter", "priority"=>"", "due"=>"", "estimate"=>"", "use"=>"", "order"=>"", "status"=>""}, "commit"=>"Create Task"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (31.0020ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pomodoro_development collection=tasks documents=[{"_id"=>"5257a49d19b2265ade000005", "name"=>"anoter", "priority"=>nil, "due"=>nil, "estimate"=>nil, "use"=>nil, "order"=>nil, "status"=>""}] flags=[] (0.0000ms)
+Redirected to http://localhost:3000/tasks/5257a49d19b2265ade000005
+Completed 302 Found in 38ms
+
+
+Started GET "/tasks/5257a49d19b2265ade000005" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5257a49d19b2265ade000005"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"5257a49d19b2265ade000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:25 +0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 52ms (Views: 44.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:27 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:28 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:28 +0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/tasks/5257a49d19b2265ade000005" for 127.0.0.1 at 2013-10-11 14:11:31 +0700
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"5257a49d19b2265ade000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={"_id"=>"5257a49d19b2265ade000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=pomodoro_development collection=tasks selector={"_id"=>"5257a49d19b2265ade000005"} flags=[:remove_first] (0.0000ms)
+  Rendered tasks/destroy.js.erb (1.0ms)
+Completed 200 OK in 17ms (Views: 9.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Processing by TasksController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=users selector={"$query"=>{"_id"=>"52579a0a19b2262712000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pomodoro_development collection=tasks selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 46ms (Views: 43.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:33 +0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 14:11:34 +0700
+Served asset /application.js - 304 Not Modified (0ms)
