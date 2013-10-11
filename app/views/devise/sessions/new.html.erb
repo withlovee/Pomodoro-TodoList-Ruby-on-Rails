@@ -1,6 +1,31 @@
-<h2>Sign in</h2>
+<div class="login">
+  <div class="login-screen">
+    <div class="login-icon">
+      <img src="images/login/icon.png" alt="Welcome to Mail App">
+      <h4>Welcome to <small>Mail App</small></h4>
+    </div>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <div class="login-form">
+      <div class="form-group">
+        <%= f.email_field :email, 
+        :autofocus => true, 
+        :class => 'form-control login-field', 
+        :placeholder => 'youremail@gmail.com' %>
+        <label class="login-field-icon fui-user" for="user_email"></label>
+      </div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.password_field :password,
+        :class => 'form-control login-field', 
+        :placeholder => 'Password' %>
+        <label class="login-field-icon fui-lock" for="user_password"></label>
+      </div>
+      <%= f.submit "Login", :class => 'btn btn-primary btn-lg btn-block' %>
+    </div>
+  </div>
+</div>
+
+<h2>Sign in</h2>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 

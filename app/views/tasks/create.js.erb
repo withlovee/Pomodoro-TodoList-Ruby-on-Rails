@@ -1,0 +1,8 @@
+<% if @task.new_record? %>
+$('#task_name').effect('highlight', { color: 'red' });
+console.log("Not added");
+<% else %>
+$('#tasks').append("<%= escape_javascript(render @task) %>");
+$('#<%= dom_id(@task) %>').effect('highlight');
+console.log("Added");
+<% end %>

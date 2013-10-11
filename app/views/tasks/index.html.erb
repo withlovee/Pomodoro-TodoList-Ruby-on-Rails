@@ -1,37 +1,27 @@
 <h1>Listing tasks</h1>
 
 <table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Priority</th>
-    <th>Due</th>
-    <th>Estimate</th>
-    <th>Use</th>
-    <th>Order</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @tasks.each do |task| %>
-  <tr id="<%= dom_id(task) %>">
-    <td><%= task.name %></td>
-    <td><%= task.priority %></td>
-    <td><%= task.due %></td>
-    <td><%= task.estimate %></td>
-    <td><%= task.use %></td>
-    <td><%= task.order %></td>
-    <td><%= task.status %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Priority</th>
+      <th>Due</th>
+      <th>Estimate</th>
+      <th>Use</th>
+      <th>Order</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="tasks">
+    <%= render @tasks %>
+  </tbody>
 </table>
 
 <br />
 
-<%= render 'form' %>
+<%= render 'create' %>
 
 <%= link_to 'New Task', new_task_path %>

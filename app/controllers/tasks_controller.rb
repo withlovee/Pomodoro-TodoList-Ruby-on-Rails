@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
-    @task = Task.new
+    #@task = Task.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -52,6 +52,7 @@ class TasksController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
+      format.js
     end
   end
 
