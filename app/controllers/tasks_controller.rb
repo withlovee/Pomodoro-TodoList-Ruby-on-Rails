@@ -3,34 +3,12 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.where(user: current_user)
     #@task = Task.new
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tasks }
-    end
-  end
-
-  # GET /tasks/1
-  # GET /tasks/1.json
-  def show
-    @task = Task.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @task }
-    end
-  end
-
-  # GET /tasks/new
-  # GET /tasks/new.json
-  def new
-    @task = Task.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @task }
     end
   end
 
@@ -43,7 +21,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
-    @task.status = "In progress"
+    @task.user = current_user
 
     respond_to do |format|
       if @task.save

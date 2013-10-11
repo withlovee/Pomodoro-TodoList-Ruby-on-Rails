@@ -1,5 +1,20 @@
-<h1>Tasks</h1>
-
+<div class="well">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="<%= asset_path 'logo.png' %>" alt="">
+    </div>
+    <div class="col-md-8" id="how-to-pom">
+      <ol>
+        <li>Decide on the task to be done</li>
+        <li>Set the pomodoro (timer) to 25 minutes</li>
+        <li>Work on the task until the timer rings; record with an x</li>
+        <li>Take a short break (3-5 minutes)</li>
+        <li>Every four "pomodori" take a longer break (15–30 minutes)</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<h2>Tasks</h2>
 <table class="table">
   <thead>
     <tr>
@@ -20,4 +35,5 @@
 
 <br />
 <h2>Add New</h2>
+<br>
 <%= render 'create' %>

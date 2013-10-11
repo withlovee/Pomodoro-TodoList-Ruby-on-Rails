@@ -1,6 +1,6 @@
   <tr id="<%= dom_id(task) %>">
-    <td><%= task.name %></td>
-    <td><%= task.priority %></td>
+    <td><%= best_in_place task, :name %></td>
+    <td><%= best_in_place task, :priority %></td>
     <td><%= task.due %></td>
     <td><%= task.estimate %></td>
     <td><%= task.use %></td>
